@@ -6,7 +6,7 @@ import Gamebox from "../components/Gamebox";
 import Results from "../components/Results";
 import { View, StyleSheet } from "react-native";
 
-const QuizPage = () => {
+const QuizPage = ({ navigation }) => {
     const [currentQuestionNumber, setCurrentQuestionNumber] = useState(0);
     const [gameStarted, setGameStarted] = useState(false);
     const [quizSubmitted, setQuizSubmitted] = useState(false);
@@ -79,6 +79,7 @@ const QuizPage = () => {
                             setQuizSubmitted={setQuizSubmitted}
                             setGameStarted={setGameStarted}
                             setCategorySelected={setCategorySelected}
+                            navigation={navigation}
                         />
                     )}
                 </>

@@ -40,7 +40,9 @@ const Results = ({
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.btnHalf}
-                        onPress={() => navigation.navigate("Home")}>
+                        onPress={() =>
+                            navigation.dispatch(StackActions.popToTop())
+                        }>
                         <Text style={styles.btnText}>Go Back Home</Text>
                     </TouchableOpacity>
                 </View>
